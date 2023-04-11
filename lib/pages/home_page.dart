@@ -1,6 +1,7 @@
 // ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, duplicate_ignore
 
 import 'package:flutter/material.dart';
+import 'package:wallet_ui/util/my_card.dart';
 
 class HomePage extends StatefulWidget {
   const HomePage({super.key});
@@ -47,7 +48,37 @@ class _HomePageState extends State<HomePage> {
                     child: Icon(Icons.add)),
               ],
             ),
+          ),
+          SizedBox(height: 25,),
+          Container(
+            height: 200,
+            child: PageView(
+              scrollDirection: Axis.horizontal
+              ,children: [
+              MyCard(
+                balance: 5250.20,
+                cardNumber: 12345678,
+                expirymonth: 10,
+                expiryYear: 24,
+                color: Colors.deepPurple[400],
+              ),
+               MyCard(
+                balance: 3250.70,
+                cardNumber: 12345678,
+                expirymonth: 11,
+                expiryYear: 26,
+                color: Colors.blue[400],
+              ),
+               MyCard(
+                balance: 5230.60,
+                cardNumber: 12345678,
+                expirymonth: 12,
+                expiryYear: 25,
+                color: Colors.geen[400],
+              ),
+            ],),
           )
+         
 
           //cards
 
